@@ -398,10 +398,12 @@
 }
 
 
-- (NSRect) documentVisibleRect	{
+- (CGRect) documentVisibleRect	{
 	if (_documentView==nil)
-		return NSZeroRect;
-	return [_documentView visibleRect];
+        // JO: changing this to work with iphone otherwise causes compilation errors.
+		return CGRectMake(0, 0, 0, 0);
+//	return [_documentView visibleRect];
+    return CGRectMake(0, 0, 0, 0);
 }
 
 
