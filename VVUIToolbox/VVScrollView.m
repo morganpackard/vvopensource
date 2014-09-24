@@ -398,12 +398,10 @@
 }
 
 
-- (CGRect) documentVisibleRect	{
+- (VVRECT) documentVisibleRect	{
 	if (_documentView==nil)
-        // JO: changing this to work with iphone otherwise causes compilation errors.
-		return CGRectMake(0, 0, 0, 0);
-//	return [_documentView visibleRect];
-    return CGRectMake(0, 0, 0, 0);
+		return VVZERORECT;
+	return [_documentView visibleRect];
 }
 
 

@@ -41,6 +41,6 @@
 - (void) scrollTopLeftToPoint:(VVPOINT)n;
 - (void) scrollByAmount:(VVPOINT)delta;
 
-- (CGRect) documentVisibleRect;
+- (VVRECT) documentVisibleRect;
 
 @end
